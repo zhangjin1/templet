@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE RelativeLayout>
+<configuration debug="true" scan="false" scanPeriod="2 seconds">
+
+	<property resource="api_proxy_config.properties" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>${logger.pattern}</pattern>
+			<charset>${logger.charset}</charset>
+		</encoder>
+	</appender>
+
+	<logger name="com.weimob.proxy" level="INFO" />
+
+	<root level="ERROR">
+		<appender-ref ref="STDOUT" />
+	</root>
+
+</configuration>
